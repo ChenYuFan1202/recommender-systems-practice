@@ -1,3 +1,16 @@
+> 本專案基於 [recommender-tutorial](https://github.com/topspinj/recommender-tutorial) 進行修改。  
+> 原始版本由 Jill Cates 開發，依據 BSD 3-Clause License 授權使用。
+
+# 虛擬環境建立（使用 conda）
+
+### 建立環境（使用 Python 3.12）
+```bash
+conda create -n recommender_systems python=3.12 # n 為 name 的意思 
+                                                # 也可以輸入 conda create --name recommender_systems python=3.12
+conda activate recommender_systems
+pip install -r requirements.txt # -r 是 requirements(s) 的縮寫 # 有問題再手動調整
+```
+
 # Recommendation Systems 101
 
 This series of tutorials explores different types of recommendation systems and their implementations. Topics include:
@@ -28,6 +41,17 @@ More information on each part can be found in the descriptions below.
 |Tutorial link|[Jupyter Notebook](part-1-item-item-recommender.ipynb)|
 |Resources|[Item-item collaborative filtering](https://www.wikiwand.com/en/Item-item_collaborative_filtering), [Amazon.com Recommendations](https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf), [Various Implementations of Collaborative Filtering](https://towardsdatascience.com/various-implementations-of-collaborative-filtering-100385c6dfe0) |
 
+### Part1：Item-Item-Recommender 所學到的內容
+- Bayesian average：處理評分很高或很低但數量很少的狀況。  
+- Collaborative Filtering (CF)：是非監督式學習。  
+- User-item matrix (utility matrix)：雖然有 user-item 這個詞，但這是一個矩陣而不是演算法。  
+- Manhattan distance：abs(x1 - x2) + abs(y1 - y2)。  
+- 更深的理解 user-based 和 item-based，前者為推薦相似的人喜歡的內容、後者為推薦類似的物品，不過兩種都會用使用者的 Feedback。  
+- 最後 Extra：User-based 的內容是我額外想做的，因為原作者接下來是直接進到 content-based 的內容。  
+
+**補充：**   
+- 由於我是先 Clone 作者的 repo，而不是 Fork，通常沒有推送權限，需要手動將 origin 改成自己的 repo 才能 push。因此，會需要輸入 `git remote set-url origin <url>`，將 origin 改為自己的 GitHub repo 位置。  
+- Fork 和 Clone 的不同之處在於 Fork 會複製一份作者的 repo 到自己的帳號並將遠端（origin）指向自己的 repo，因此對自己的 Fork 擁有推送權限。要注意的是，還是需要用 `git clone` 下載 Fork。
 
 ### Part 2: Handling the Cold Start Problem with Content-based Filtering
 
@@ -37,6 +61,7 @@ More information on each part can be found in the descriptions below.
 |Requirements|Python 3.6+, Jupyter Lab, numpy, pandas, matplotlib, seaborn, scikit-learn|
 |Tutorial link|[Jupyter Notebook](part-2-cold-start-problem.ipynb)|
 
+### Part2：Cold-start-problem 所學到的內容
 
 ### Part 3: Building an Implicit Feedback Recommender System
 
