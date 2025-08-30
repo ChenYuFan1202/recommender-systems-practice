@@ -61,7 +61,14 @@ More information on each part can be found in the descriptions below.
 |Requirements|Python 3.6+, Jupyter Lab, numpy, pandas, matplotlib, seaborn, scikit-learn|
 |Tutorial link|[Jupyter Notebook](part-2-cold-start-problem.ipynb)|
 
-### Part2：Cold-start-problem 所學到的內容
+### Part2：Cold-start-problem 所學到的內容  
+- Content-Based Filtering 一般被視為非監督式學習，因為它主要依靠物品或使用者特徵向量與相似度計算。但在實務中，也能結合監督式方法（例如分類或排序模型）來提升效果。
+- 我發現原作者三個做錯的地方並進行修正  
+    1. (no genres listed) 沒有正確刪除。  
+    2. 沒有發行年份的電影只有四個，作者的函式邏輯是對的，但 Series 會在後面新增 `""`。  
+    3. 作者使用 `movies.index` 將 index 轉換成原始的電影名稱，但因為前兩步驟有刪除電影，因此，會發生問題。  
+- Extra：我修改原作者最後的函式，將推薦的電影附上風格以及相似度分數，雖然相似度分數在實際畫面不該出現，但這邊是為了要做驗證。  
+- 結論：學到很多 Content-Based Filtering 特徵處理的步驟，如果有使用者特徵也可以這樣做推薦，很有趣，謝謝原作者！
 
 ### Part 3: Building an Implicit Feedback Recommender System
 
