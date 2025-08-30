@@ -44,4 +44,4 @@ There are two types of feedback data:
 
 2. Implicit feedback, which looks at a user's indirect behaviour towards an item (e.g., number of times a user has watched a movie)
 
-Before using this data in your recommendation system, it is important to perform some data pre-processing. For example, you should normalize ratings of different users to the same scale. More information on how to normalize data in recommendation systems is described [here](https://www.cs.purdue.edu/homes/lsi/sigir04-cf-norm.pdf).
+Before using this data in your recommendation system, it is important to perform some data pre-processing. For example, you should normalize ratings of different users to the same scale. More information on how to normalize data in recommendation systems is described [here](https://www.cs.purdue.edu/homes/lsi/sigir04-cf-norm.pdf). 此連結已經不存在。

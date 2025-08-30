@@ -41,7 +41,7 @@ More information on each part can be found in the descriptions below.
 |Tutorial link|[Jupyter Notebook](part-1-item-item-recommender.ipynb)|
 |Resources|[Item-item collaborative filtering](https://www.wikiwand.com/en/Item-item_collaborative_filtering), [Amazon.com Recommendations](https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf), [Various Implementations of Collaborative Filtering](https://towardsdatascience.com/various-implementations-of-collaborative-filtering-100385c6dfe0) |
 
-### Part1：Item-Item-Recommender 所學到的內容
+### Part 1：Item-Item-Recommender 所學到的內容
 - Bayesian average：處理評分很高或很低但數量很少的狀況。  
 - Collaborative Filtering (CF)：是非監督式學習。  
 - User-item matrix (utility matrix)：雖然有 user-item 這個詞，但這是一個矩陣而不是演算法。  
@@ -61,7 +61,7 @@ More information on each part can be found in the descriptions below.
 |Requirements|Python 3.6+, Jupyter Lab, numpy, pandas, matplotlib, seaborn, scikit-learn|
 |Tutorial link|[Jupyter Notebook](part-2-cold-start-problem.ipynb)|
 
-### Part2：Cold-start-problem 所學到的內容  
+### Part 2：Content-based Filtering 所學到的內容  
 - Content-Based Filtering 一般被視為非監督式學習，因為它主要依靠物品或使用者特徵向量與相似度計算。但在實務中，也能結合監督式方法（例如分類或排序模型）來提升效果。
 - 我發現原作者三個做錯的地方並進行修正  
     1. (no genres listed) 沒有正確刪除。  
@@ -77,3 +77,14 @@ More information on each part can be found in the descriptions below.
 |Objective|Unlike explicit feedback (e.g., user ratings), implicit feedback infers a user's degree of preference toward an item by looking at their indirect interactions with that item. In this tutorial, we will investigate a recommender model that specifically handles implicit feedback datasets.|
 |Requirements|Python 3.6+, Jupyter Lab, numpy, pandas, implicit|
 |Tutorial link|[Jupyter Notebook](part-3-implicit-feedback-recommender.ipynb)|
+
+### Part 3：Implict Feedback Recommender System 所學到的內容  
+- 做法和 CF 很像，但用不同的特徵和模型。  
+- Matrix factorization is particularly useful for very sparse data（這一點讓我知道線性代數的重要，需要再補齊!）。  
+- 有 ALS（Alternating Least Squares）和 BPR（Bayesian Personalized Rankin） 等作法。  
+- similar_items() 和 recommend()，前者依照物品推、後者依照推使用者推。  
+- 最大的雷點是要記得模型用什麼當列訓練就要用什麼列來預測。  
+- Extra：我有補上風格來驗證原作者的說法，但似乎不太正確。  
+
+**補充：**  
+- 我在無法使用的圖片或連結都有說明無效。
