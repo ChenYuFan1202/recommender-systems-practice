@@ -78,7 +78,7 @@ More information on each part can be found in the descriptions below.
 |Requirements|Python 3.6+, Jupyter Lab, numpy, pandas, implicit|
 |Tutorial link|[Jupyter Notebook](part-3-implicit-feedback-recommender.ipynb)|
 
-### Part 3：Implict Feedback Recommender System 所學到的內容  
+### Part 3：Implicit Feedback Recommender System 所學到的內容  
 - 做法和 CF 很像，但用不同的特徵和模型。  
 - Matrix factorization is particularly useful for very sparse data（這一點讓我知道線性代數的重要，需要再補齊!）。  
 - 有 ALS（Alternating Least Squares）和 BPR（Bayesian Personalized Rankin） 等作法。  
